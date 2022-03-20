@@ -12,31 +12,15 @@ Proses kedua adalah sorting hasil selisih nilai maksimum dan minimum dari hasil 
 
 ## Perbandingan Waktu Eksekusi Serial & Paralel
 ### Test Case 1
-Serial
-<img src="/screenshots/TC1-serial.png" style="max-width: 120px">
-
-Paralel
 <img src="/screenshots/TC1.png" style="max-width: 120px">
 
 ### Test Case 2
-Serial
-<img src="/screenshots/TC2-serial.png" style="max-width: 120px">
-
-Paralel
 <img src="/screenshots/TC2.png" style="max-width: 120px">
 
 ### Test Case 3
-Serial
-<img src="/screenshots/TC3-serial.png" style="max-width: 120px">
-
-Paralel
 <img src="/screenshots/TC3.png" style="max-width: 120px">
 
 ### Test Case 4
-Serial
-<img src="/screenshots/TC4-serial.png" style="max-width: 120px">
-
-Paralel
 <img src="/screenshots/TC4.png" style="max-width: 120px">
 
 ### Summary
