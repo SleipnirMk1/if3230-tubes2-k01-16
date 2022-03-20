@@ -4,6 +4,11 @@
 * Rayhan Alghifari Fauzta (13519039)
 
 ## Cara Kerja Program
+Terdapat dua komponen yg memanfaatkan pemrosesan paralel CUDA.
+
+Proses pertama adalah penghitungan konvolusi matriks. Perhitungan konvolusi menggunakan kombinasi thread parallel dan block parallel dengan jumlah thread dalam kernel sebanyak 128.
+
+Proses kedua adalah sorting hasil selisih nilai maksimum dan minimum dari hasil konvolusi. Sorting menggunakan algoritma odd-even sort atau disebut juga brick sort. Algoritma ini bekerja dengan cara memilih elemen urutan genap (index ganjil) dan membandingkannya dengan elemen sebelumnya dan kemudian setelahnya. Ini dlakukan sebanyak jumlah elemen dibagi 2.
 
 ## Perbandingan Waktu Eksekusi Serial & Paralel
 ### Test Case 1
