@@ -24,7 +24,7 @@ Proses kedua adalah sorting hasil selisih nilai maksimum dan minimum dari hasil 
 <img src="/screenshots/TC4.png" style="max-width: 120px">
 
 ### Summary
-| TC \| Method | Paralel  | Serial   |
+| TC  | Paralel  | Serial   |
 |--------------|----------|----------|
 | TC1          | 0.138327 | 0.008936 |
 | TC2          | 0.244463 | 0.769865 |
@@ -37,4 +37,10 @@ Penggunaan thread lebih cocok untuk dataset yang berukuran lebih besar. Selain i
 Terdapat perbedaan pada hasil penghitungan program serial dan paralel. Kami menduga hal ini dapat disebabkan oleh kesalahan dalam paralelisasi sehingga proses dijalankan dengan jumlah yang tidak sesuai dengan seharusnya. Hal tersebut bisa menyebabkan terjadinya penghitungan yang tidak seharusnya ada, atau sebaliknya. Ini dapat memengaruhi hasil, sehingga menyebabkan perbedaan hasil.
 
 ## Analisis Hasil Eksekusi
-Program paralel dilakukan dengan memproses matriks, sehingga waktu eksekusi ditentukan oleh jumlah matriks.
+Dari ketiga kasus yang diberikan sebagai berikut:
+
+* Jumlah Matrix: 10000, Ukuran Kernel: 1x1, Ukuran Matrix: 1x1
+* Jumlah Matrix: 1, Ukuran Kernel: 1x1, Ukuran Matrix: 100x100
+* Jumlah Matrix: 1, Ukuran Kernel: 100x100, Ukuran Matrix: 100x100
+
+Berdasarkan hipotesis kami, waktu eksekusi yang paling cepat akan dicapai oleh kasus kedua. Pada program kami, proses konvolusi akan disesuaikan dengan jumlah matriks inputnya. Karena hal ini, kasus pertama akan berjalan paling lama karena memiliki jumlah matriks paling banyak. Akan tersisa kasus kedua dan ketiga dengan jumlah matriks dan ukuran matriks yang sama. Melihat dari ukuran kernel, kasus kedua memiliki keunggulan karena kernel yang digunakan berukuran 1x1. Ukuran kernel yang kecil ini akan menghasilkan matriks konvolusi yang lebih besar sehingga proses perhitungan dilakukan oleh lebih banyak thread dalam satu waktu.
