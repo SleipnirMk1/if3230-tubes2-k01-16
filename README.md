@@ -38,10 +38,10 @@ Paralel
 ### Summary
 | TC \| Method | Serial   | Paralel  |
 |--------------|----------|----------|
-| TC1          | 0.013715 | 0.130920 |
-| TC2          | 0.736175 | 0.265493 |
-| TC3          | 0.710446 | 0.405243 |
-| TC4          | 9.346168 | 2.564888 |
+| TC1          | 0.009796 | 0.130920 |
+| TC2          | 0.740646 | 0.265493 |
+| TC3          | 0.736021 | 0.405243 |
+| TC4          | 9.756246 | 2.564888 |
 ## Perbedaan Hasil Serial & Paralel
 Terdapat perbedaan pada hasil penghitungan program serial dan paralel. Kami menduga hal ini dapat disebabkan oleh kesalahan dalam paralelisasi sehingga proses dijalankan dengan jumlah yang tidak sesuai dengan seharusnya. Hal tersebut bisa menyebabkan terjadinya penghitungan yang tidak seharusnya ada, atau sebaliknya. Ini dapat memengaruhi hasil, sehingga menyebabkan perbedaan hasil.
 
