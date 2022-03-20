@@ -24,12 +24,12 @@ Proses kedua adalah sorting hasil selisih nilai maksimum dan minimum dari hasil 
 <img src="/screenshots/TC4.png" style="max-width: 120px">
 
 ### Summary
-| TC \| Method | Serial   | Paralel  |
+| TC \| Method | Paralel  | Serial   |
 |--------------|----------|----------|
-| TC1          | 0.009796 | 0.130920 |
-| TC2          | 0.740646 | 0.265493 |
-| TC3          | 0.736021 | 0.405243 |
-| TC4          | 9.756246 | 2.564888 |
+| TC1          | 0.138327 | 0.008936 |
+| TC2          | 0.244463 | 0.769865 |
+| TC3          | 0.393585 | 0.742717 |
+| TC4          | 2.505191 | 9.789979 |
 
 Penggunaan thread lebih cocok untuk dataset yang berukuran lebih besar. Selain itu, program paralel akan bekerja lebih efektif seiring dengan berkembangnya ukuran dataset. Sehingga sesuai dengan hasil percobaan di mana eksekusi program paralel lebih cepat dibandingkan program serial.
 
@@ -37,3 +37,4 @@ Penggunaan thread lebih cocok untuk dataset yang berukuran lebih besar. Selain i
 Terdapat perbedaan pada hasil penghitungan program serial dan paralel. Kami menduga hal ini dapat disebabkan oleh kesalahan dalam paralelisasi sehingga proses dijalankan dengan jumlah yang tidak sesuai dengan seharusnya. Hal tersebut bisa menyebabkan terjadinya penghitungan yang tidak seharusnya ada, atau sebaliknya. Ini dapat memengaruhi hasil, sehingga menyebabkan perbedaan hasil.
 
 ## Analisis Hasil Eksekusi
+Program paralel dilakukan dengan memproses matriks, sehingga waktu eksekusi ditentukan oleh jumlah matriks.
