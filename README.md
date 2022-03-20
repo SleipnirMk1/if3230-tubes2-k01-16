@@ -5,7 +5,6 @@
 
 ## Cara Kerja Program
 
-
 ## Perbandingan Waktu Eksekusi Serial & Paralel
 ### Test Case 1
 Serial

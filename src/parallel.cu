@@ -88,6 +88,9 @@ int main() {
   // conv row & col memory allocation
 	cudaMalloc((void **)&cu_row, sizeof(int));
 	cudaMalloc((void **)&cu_col, sizeof(int));
+
+  // sort array memory allocation
+  cudaMalloc((void **)&cu_arr, num_targets*sizeof(int));
     
   // matrix memory allocation
 	cudaMalloc((void **)&kernel_mat, sizeof(Matrix));
@@ -120,9 +123,16 @@ int main() {
   }
 
   // sorting odd even
-  // max thread 128
-  cudaMemcpy(cu_arr, arr_range, sizeof(int), cudaMemcpyHostToDevice);
-  odd_even(cu_arr, 128);
+  cudaError err = cudaMemcpy(cu_arr, arr_range, num_targets*sizeof(int), cudaMemcpyHostToDevice);
+  if(err !=cudaSuccess) {
+    printf("CUDA error copying to Device for sorting: %s\n", cudaGetErrorString(err));
+  }
+  odd_even(cu_arr, num_targets);
+
+  err = cudaMemcpy(arr_range, cu_arr, num_targets*sizeof(int), cudaMemcpyDeviceToHost);
+  if(err !=cudaSuccess) {
+    printf("CUDA error copying to Host from sorting: %s\n", cudaGetErrorString(err));
+  }
 
   // print the min, max, median, and floored mean of data range array
   median = get_median(arr_range, num_targets);
