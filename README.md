@@ -34,7 +34,7 @@ Proses kedua adalah sorting hasil selisih nilai maksimum dan minimum dari hasil 
 Penggunaan thread lebih cocok untuk dataset yang berukuran lebih besar. Selain itu, program paralel akan bekerja lebih efektif seiring dengan berkembangnya ukuran dataset. Sehingga sesuai dengan hasil percobaan di mana eksekusi program paralel lebih cepat dibandingkan program serial.
 
 ## Perbedaan Hasil Serial & Paralel
-Terdapat perbedaan pada hasil penghitungan program serial dan paralel. Kami menduga hal ini dapat disebabkan oleh kesalahan dalam paralelisasi sehingga proses dijalankan dengan jumlah yang tidak sesuai dengan seharusnya. Hal tersebut bisa menyebabkan terjadinya penghitungan yang tidak seharusnya ada, atau sebaliknya. Ini dapat memengaruhi hasil, sehingga menyebabkan perbedaan hasil.
+Hasil eksekusi program menunjukkan perbedaan hasil min, max, median, dan mean antara program serial dan paralel. Hal ini tergolong menyimpang dari kondisi umumnya yaitu hasil eksekusi serial dan paralel memberikan hasil yang sama dan hanya waktunya saja yang berbeda. Jika dianalisis penyebabnya, satu hal yang paling mungkin terjadi adalah kesalahan implementasi paralelisasi program. Proses penghitungan konvolusi matriks kemungkinan besar kurang sempurna dari segi pengalokasian thread ke matriks kernel atau output saat proses konvolusi.
 
 ## Analisis Hasil Eksekusi
 Dari ketiga kasus yang diberikan sebagai berikut:
