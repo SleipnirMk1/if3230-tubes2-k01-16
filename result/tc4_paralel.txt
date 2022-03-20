@@ -1,0 +1,5 @@
+min: 42255911
+max: 31670464
+median: 34399494
+floored mean: 31868949
+Processing Time: 2.577404
